@@ -18,6 +18,9 @@ var leaveUrl = 'http://localhost:5173/'
 function getSignature() {
   fetch(authEndpoint, {
     method: 'POST',
+    headers: {
+    'Content-Type': 'application/json', // Specify the content type as JSON
+    },
     body: JSON.stringify({
       meetingNumber: meetingNumber,
       role: role
